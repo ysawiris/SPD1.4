@@ -3,26 +3,27 @@ Class: SPD 1.4
 Assignment: Coding Syntax 
 """
 
-import Linked_List from "LinkedList.py"
+from linkedlist import LinkedList
 
 class Stack:
-    def _init_():
-        this.List = new Linked_List();
+    def __init__(self):
+        self.list = LinkedList()
 
-    def push(newItem) :
+    def push(self, newItem):
         "Insert the given item on the top of this stack"
-        // prepend given item before head node 
-        this.List.prepend(newItem , index = 0);
+        #prepend given item before head node 
+        self.list.prepend(newItem)
 
-    
-    def peek() :
+    def peek(self):
         "Return the item on the top of this stack"
-        if ( this.List.head !== none ) {
-            return(this.List.head.data[ 0 ]);
-        }else{ return none; }
+        if self.list.head != None:
+            return self.list.head.data[0]
+        else:
+            return None
 
-    def pop() :
+    def pop(self) :
         "Remove and return the item on the top of this stack"
-        topItem=this.peak();
-        this.List.delete(topItem);
-        return(topItem);
+        topItem = self.peek()
+        self.list.delete(topItem)
+        
+        return(topItem)
